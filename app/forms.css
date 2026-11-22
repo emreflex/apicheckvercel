@@ -1,0 +1,165 @@
+.login-page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f6f7fc;
+  color: #1c2036;
+}
+
+.login-card {
+  width: min(100%, 438px);
+  background: #fff;
+  border: 1px solid #e8e8f1;
+  border-radius: 24px;
+  padding: clamp(24px, 6vw, 40px);
+  box-shadow: 0 20px 80px #33315c0d;
+}
+
+.login-brand, .login-privacy, .login-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-brand {
+  margin-bottom: 28px;
+  font-size: 18px;
+  font-weight: 690;
+}
+
+.login-brand span, .upload-symbol {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #f0edff;
+  color: #6046d0;
+}
+
+.login-card h1, .upload-dialog h2 {
+  margin: 0 0 8px;
+  color: #1c2036;
+  font-size: 24px;
+  line-height: 1.23;
+  font-weight: 690;
+  letter-spacing: -0.035em;
+}
+
+.login-card p, .upload-dialog p {
+  color: #555c74;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.login-card > a { margin-top: 20px; }
+
+.login-form, .upload-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 21px;
+}
+
+.login-form label, .upload-dates label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 630;
+}
+
+.login-form input, .upload-dates input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #dfe1ec;
+  border-radius: 9px;
+  min-height: 43px;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.action-primary, .upload-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  min-height: 42px;
+  padding: 9px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.action-primary { color: #fff; background: #624bd8; }
+.action-primary:hover:not(:disabled) { background: #5039c1; }
+.action-primary:disabled, .upload-secondary:disabled { opacity: .58; cursor: default; }
+.upload-secondary { border-color: #dfe1ec; background: #fff; color: #353952; }
+.upload-secondary:hover:not(:disabled) { background: #f7f7fc; }
+.login-form .action-primary { margin-top: 7px; }
+
+.login-card .login-privacy { margin-top: 23px; font-size: 12px; }
+.login-privacy svg, .login-notice svg { flex: none; }
+.login-notice { padding: 12px; border-radius: 9px; background: #f4f1ff; color: #6046d0; }
+.login-card .form-error, .upload-dialog .form-error { color: #a92236; }
+
+.upload-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(calc(100% - 24px), 490px);
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  border: 1px solid #e1dff0;
+  border-radius: 19px;
+  padding: clamp(18px, 5vw, 27px);
+  background: #fff;
+  color: #1c2036;
+  box-shadow: 0 22px 85px #14122938;
+}
+
+.upload-dialog::backdrop { background: #17132e70; }
+.upload-heading { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+.upload-close { color: #50546c; cursor: pointer; padding: 4px; border-radius: 6px; }
+.upload-close:hover { background: #f3f1fe; }
+.upload-file {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 24px 8px;
+  border: 1px dashed #ad9ae8;
+  border-radius: 12px;
+  background: #f8f6ff;
+  color: #6046d0;
+  font-size: 14px;
+  font-weight: 630;
+}
+.upload-file input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+.upload-file:focus-within, .upload-dialog :focus-visible, .login-page :focus-visible {
+  outline: 2px solid #6953df;
+  outline-offset: 2px;
+}
+
+.upload-found {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f6f4ff;
+  padding: 13px;
+  border-radius: 10px;
+  color: #5841bc;
+}
+.upload-found svg { flex: none; }
+.upload-found dl { width: 100%; display: grid; gap: 6px; font-size: 13px; }
+.upload-found dl div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 9px; }
+.upload-found dd { font-weight: 650; }
+.upload-dates { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 10px; }
+.upload-confirm { display: flex; align-items: start; gap: 8px; font-size: 13px; line-height: 1.45; }
+.upload-confirm input { accent-color: #624bd8; width: 17px; height: 17px; flex: none; }
+.upload-dialog p.upload-note { font-size: 12px; }
+.upload-actions { display: flex; flex-wrap: wrap; justify-content: end; gap: 8px; margin-top: 3px; }

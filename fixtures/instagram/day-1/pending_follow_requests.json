@@ -1,0 +1,25 @@
+{
+  "relationships_follow_requests_sent": [
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        { "href": "https://www.instagram.com/_u/bekleyen_hesap", "value": "bekleyen_hesap", "timestamp": 1769853600 }
+      ]
+    },
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        { "href": "https://www.instagram.com/_u/kabul_edilen", "value": "kabul_edilen", "timestamp": 1769857200 }
+      ]
+    },
+    {
+      "title": "",
+      "media_list_data": [],
+      "string_list_data": [
+        { "href": "https://www.instagram.com/_u/belirsiz_hesap", "value": "belirsiz_hesap" }
+      ]
+    }
+  ]
+}
